@@ -7,6 +7,7 @@ import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import comRoutes from "./routes/comRoutes.js";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 import { config } from "dotenv";
 config()
 // import { del1User, forSignup, get1user, getAllUsers, update1User } from "./controller/userController.js";
@@ -33,6 +34,11 @@ app.use(e.json());
 app.use(e.urlencoded({extended:true}))
 
 app.use(e.static('./box'))
+
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true,
+})) 
 
 app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'box','index.html'))
