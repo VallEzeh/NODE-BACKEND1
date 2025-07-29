@@ -5,7 +5,7 @@ const router = e.Router();
 
 router.post('/', forSignup);
 
-router.get('/users', getAllUsers);
+router.get('/get', getAllUsers);
 
 router.get('/:id', get1user);
 
