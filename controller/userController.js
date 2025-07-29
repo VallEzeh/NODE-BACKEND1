@@ -5,7 +5,7 @@ import sendEmail from '../sendEmail.js';
 
 const forSignup = async (req, res) => {
     try {
-        let { firstname, lastname, email, password, role } = req.body;
+        let { firstname, lastname, email, password, } = req.body;
 
         if (!firstname || !lastname || !email || !password) {
             res.status(500).json({message:"All fields are required!"})
