@@ -10,7 +10,7 @@ const createPost = async (req, res) => {
 
      const image = {
        url: req.file?.path,
-       filename: req.file?.filename,
+       filename: req.file?.filename,  
      };
 
      const newPost = await Post.create({

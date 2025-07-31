@@ -9,7 +9,7 @@ router.get('/get', getAllUsers);
 
 router.get('/:id', get1user);
 
-router.delete("/:id", authorize(["Admin"]), del1User);
+router.delete("/:id", authorize(["Admin","user"]), del1User);
 
 router.put('/:id', update1User);
 
